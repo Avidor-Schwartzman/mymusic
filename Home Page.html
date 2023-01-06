@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>The Big Four Grunge Bands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 11.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;color: aliceblue;">The Big Four Grunge Bands</h1>
+
+    </header>
+    <nav style="display: flex; background-color: black;">
+        <a style="color: white; text-decoration: none; padding: 15px;"
+            href="#https://www.youtube.com/watch?v=Ul7sWoGaKIs&ab_channel=sgtpaminta">Nirvana</a>
+        <a style="color: white; text-decoration: none; padding: 15px;"
+            href="https://www.youtube.com/watch?v=5ZH2it92ZmA&ab_channel=PearlJam">Pearl Jam</a>
+        <a style="color: white; text-decoration: none; padding: 15px;"
+            href="#https://www.youtube.com/watch?v=p8hKsPtw4yY&ab_channel=TheSteved111">Soundgarden</a>
+        <a style="color: white; text-decoration: none; padding: 15px;"
+            href="https://www.youtube.com/watch?v=eDEtFIyKit0&ab_channel=DaleGribble">Alice in Chains</a>
+
+        </div>
+        <label for="grunge-bands">Select a grunge band:</label>
+        <select name="grunge-bands" id="grunge-bands">
+            <option value="">--Please choose an other grunge band and look them up--</option>
+            <option value="screaming-trees">Screaming Trees</option>
+            <a href="https://en.wikipedia.org/wiki/Screaming_Trees">Screaming Trees</a>
+            <option value="mudhoney">Mudhoney</option>
+            <option value="mother-love-bone">Mother Love Bone</option>
+            <option value="temple-of-the-dog">Temple of the Dog</option>
+        </select>
+    </nav>
+
+
+
+    <div style="display: flex; flex-direction: column;">
+        <div style="background-color: yellow; padding: 15px;">
+            <h3 id="nirvana">Nirvana</h3>
+            <p>Nirvana was an American rock band formed in Aberdeen, Washington, in 1987.
+                <br>
+                <br> The band consisted of vocalist
+                and guitarist Kurt Cobain, bassist Krist Novoselic, and drummer Dave Grohl.
+            </p>
+            <br>
+            <br>
+            <img src="nirvana.jfif" alt="picture">
+        </div>
+        <div style="background-color: crimson; padding: 15px;">
+            <h3 id="pearljam">Pearl Jam</h3>
+            <p>Pearl Jam is an American rock band formed in Seattle, Washington, in 1990.
+                <br>
+                <br>
+                The band's lineup consists of
+                Eddie Vedder (vocals), Mike McCready (guitar), Stone Gossard (guitar), and Jeff Ament (bass).
+            </p>
+            <br>
+            <br>
+            <img src="pearl jam.jfif" alt="picture">
+        </div>
+        <div style="background-color: lightblue; padding: 15px;">
+            <h3 id="soundgarden">Soundgarden</h3>
+            <p>Soundgarden is an American rock band formed in Seattle, Washington, in 1984.
+                <br>
+                <br>
+                The band's lineup consists
+                of Chris Cornell (vocals, guitar), Kim Thayil (guitar), and Matt Cameron (drums).
+            </p>
+            <br>
+            <br>
+            <img src="soundgarden.jfif" alt="picture">
+        </div>
+        <div style="background-color: lightgray; padding: 15px;">
+            <h3 id="aliceinchains">Alice in Chains</h3>
+            <p>Alice in Chains is an American rock band formed in Seattle, Washington, in 1987.
+                <br>
+                <br>
+                The band's lineup
+                consists of Jerry Cantrell (guitar, vocals), Sean Kinney (drums), Mike Inez (bass), and William DuVall
+                (vocals, guitar).
+            </p>
+            <br>
+            <br>
+            <br>
+            <img src="alice in chains.jfif" alt="picture">
+        </div>
+
+    </div>
+    <nav style="display: flex; background-color: black;">
+        ...
+    </nav>
+    <div id="sidebar"
+        style="position: fixed; top: 0; right: 0; height: 130%; width: 120px; background-color:aliceblue;">
+        <p> See all of the content that is written here</p>
+        <ul>
+
+            <button onclick="toggleMenu()">Grunge bands NOT from Seattle</button>
+
+            <div id="toggleMenu">
+                <a href="https://en.wikipedia.org/wiki/L7_(band)">L7</a><br>
+                <a href="https://en.wikipedia.org/wiki/The_Smashing_Pumpkins">Smashing Pumpkins</a><br>
+                <a href="https://en.wikipedia.org/wiki/Hole_(band)">Hole</a><br>
+                <a href="https://en.wikipedia.org/wiki/Radiohead">Radiohead (early work)</a><br>
+            </div>
+        </ul>
+    </div>
+
+    </nav>
+
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <div id="carousel">
+        <div id="slide1" class="slide">
+            <img src="nirvana.jfif" alt="">
+        </div>
+        <div id="slide2" class="slide">
+            <img src="pearl jam.jfif" alt="">
+        </div>
+        <div id="slide3" class="slide">
+            <img src="soundgarden.jfif" alt="">
+        </div>
+        <div id="slide3" class="slide">
+            <img src="alice in chains.jfif" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        const menuButton = document.querySelector('.menu-button');
+        const popUpMenu = document.querySelector('.pop-up-menu');
+
+        menuButton.addEventListener('click', () => {
+            if (popUpMenu.style.display === 'block') {
+                popUpMenu.style.display = 'none';
+            } else {
+                popUpMenu.style.display = 'block';
+            }
+        });
+
+    </script>
+    <script>
+        function toggleMenu() {
+
+            var menu = document.getElementById("toggleMenu");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+    <script>var currentSlide = 0;
+        var slides = document.querySelectorAll('.slide');
+        var totalSlides = slides.length;
+
+        setInterval(function () {
+            for (var i = 0; i < totalSlides; i++) {
+                slides[i].style.display = 'none';
+            }
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].style.display = 'block';
+        }, 3000); // interval of 2 seconds
+    </script>
+
+    <main style="background-color: whitesmoke; text-align: center; color: whitesmoke;">
+        <nav>
+            <a href="index 11.html">Home</a>
+            <a href="about us.html">About us</a>
+            <a href="Contact us.html">Contact Us</a>
+        </nav>
+    </main>
+
+
+
+    <footer style="background-color: blue; padding: 15px; color: white;">
+        Copyright 2023 The Big Four Grunge Bands and friends
+    </footer>
+
+
+
+</body>
+
+</html>

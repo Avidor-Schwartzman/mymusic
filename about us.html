@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Big Four Grunge Bands - About Us</title>
+  <style>
+    .carousel {
+      width: 500px;
+      height: 500px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    /* Style the images in the carousel */
+    .carousel img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Style the previous and next buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Style the dots */
+    .dot {
+      cursor: pointer;
+      height: 13px;
+      width: 13px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Style the caption */
+    .caption {
+      display: block;
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Style the arrows and dots */
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="background-color: black;">
+    <!-- Add your logo here -->
+    <img src="images.jfif" alt="The Big Four Grunge Bands">
+  </header>
+  <nav>
+    <!-- Add your navigation links here -->
+    <a href="Home Page.html">Home</a> |
+    <a href="about us.html">About Us</a> |
+    <a href="resources.html">Resources</a> |
+    <a href="Contact us.html">Contact</a>
+  </nav>
+  <main style="background-color: lightgray;">
+    <h1>About Us</h1>
+    <p>Welcome to the "About Us" page for The Big Four Grunge Bands!</p>
+    <p>We are a group of music enthusiasts who are passionate about the grunge scene of the 1990s. Our mission is to
+      celebrate and preserve the legacy of the four most influential grunge bands of all time: Nirvana, Pearl Jam,
+      Soundgarden, and Alice in Chains.</p>
+    <p>On this page, you'll find information about the history and impact of these bands, as well as resources for
+      learning more about grunge music.</p>
+    <p>To the left of this text, you'll find a slideshow of images featuring the Big Four Grunge Bands. These images are
+      just a small sampling of the rich history of this genre, and we encourage you to explore our website to learn
+      more.</p>
+    <p>Thank you for visiting our "About Us" page. We hope you enjoy learning about the Big Four Grunge Bands as much as
+      we do!</p>
+    <p>Sincerely,</p>
+    <p>Avidor Schwartaman</p>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="grunge.jfif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images.jfif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="collage.jfif" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <div id="slideshow">
+      <div class="slide">
+        <img src="grunge.jfif" alt="Slide 1">
+        <p>Slide 1</p>
+      </div>
+      <div class="slide">
+        <img src="images.jfif" alt="Slide 2">
+        <p>Slide 2</p>
+      </div>
+      <div class="slide">
+        <img src="collage.jfif" alt="Slide 3">
+        <p>Slide 3</p>
+      </div>
+    </div>
+
+    <button onclick="previousSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+
+  </main>
+  <br>
+  <br>
+  <br>
+  <footer style="background-color: blue; color: whitesmoke;">
+    <!-- Add your footer content here -->
+    Copyright The Big Four Grunge Bands [Year] | All Rights Reserved | Contact Us: info@bigfourgrungebands.com |
+    [Include any relevant social media links]
+  </footer>
+
+  <script>
+    let slideshow = document.getElementById("slideshow");
+    let slides = slideshow.getElementsByClassName("slide");
+    let currentSlide = 0;
+
+    function showSlide(n) {
+      slides[currentSlide].style.display = "none";
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].style.display = "block";
+    }
+
+    function previousSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    showSlide(currentSlide);
+
+  </script>
+</body>
+
+</html>
