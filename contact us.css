@@ -1,0 +1,67 @@
+/* Add some basic styling to the form */
+body{ background-color:whitesmoke}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: lightgray;
+  }
+  
+  /* Style the form group elements */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Style the submit button */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the success and error messages */
+  .success-message,
+  .error-message {
+    display: none;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .success-message {
+    color: #4CAF50;
+    background-color: #dff0d8;
+  }
+  
+  .error-message {
+    color: #ff0000;
+    background-color: #f2dede;
+  }
+  
